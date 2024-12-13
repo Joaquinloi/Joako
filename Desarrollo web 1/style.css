@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+container-fluid {
+  background-color: beige;
+}
+
+navbar-brand {
+  height: 100%;
+  width: 5px;
+}
+
+body {
+  background-color:  rgb(219, 215, 215);
+}
+
+header .logo {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logo :hover {
+  transform: scale(2.5);
+}
+
+.logo {
+  height: 70px;
+  width: auto;
+  justify-content: center;
+}
+
+.collapse navbar-collapse .nav-link active :hover {
+  transform: scale(1.5);
+}
+
+.navbar-collapse .nav-link active :hover {
+  color: yellowgreen;
+}
+
+.grid__container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: .5rem;
+  display: grid;
+/* rows es para las filas. Auto rows le digo a grid que cree las filas */
+  grid-auto-rows: 300px;
+  /* colums template para indicar la cantidad de columnas.El parametro repeat en el primer campo es la cant de columnas que quiero y el segundo el tamaño */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* 1fr es la unidad de medida una fraccion/ auto-fill es para que grid asigne el tamaño */
+  gap: 1rem;
+}
+
+.grid__items {
+  color: rgb(226, 158, 68);
+  font-size: 1.5rem;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+ } 
+
+/* ahora modifico cada uno de los hijos, para poder agregar la imagen*/
+.grid__items:nth-child(1) {
+  background-image: url(imagenes/aperitivos.jpg);
+  /* si quiero que la imagen 1 ocupe dos cuadritos de la grilla hacia la derecha utilizo grid-column: span 2; */
+}
+.grid__items:nth-child(2) {
+  background-image: url(imagenes/carnes.jpg);
+}
+.grid__items:nth-child(3) {
+  background-image: url(imagenes/panaderia.jpg);
+  
+}
+.grid__items:nth-child(4) {
+  background-image: url(imagenes/pescados\ y\ mariscos.jpg);
+  
+}
+.grid__items:nth-child(5) {
+  background-image: url(imagenes/postres.jpg);
+  
+}
+.grid__items:nth-child(6) {
+  background-image: url(imagenes/salsas.jpg);
+  
+}
+.grid__items:nth-child(7) {
+  background-image: url(imagenes/sopas\ y\ guisos.jpg);
+  
+}
+.grid__items:nth-child(8){
+  background-image: url(imagenes/verduras.jpg);
+
+}
+
+ @media screen and (min-width:850px) {
+   /* a partir de los 850px aplico ciertos estilos */
+/* por ejemplo que ocupe dos a la derecha o dos hacia abajo */
+/*creo la clase para la imagen que quiero mover */
+.ancho {
+   grid-column: span 2;
+} 
+}
+
+/*# sourceMappingURL=style.css.map */
